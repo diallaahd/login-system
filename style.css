@@ -1,0 +1,139 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
+  background-size: 300% 300%;
+  animation: bgMove 8s ease infinite;
+}
+
+/* 🔥 animation fond */
+@keyframes bgMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* 🧊 effet glass */
+.container{
+  width:360px;
+  padding:25px;
+  border-radius:18px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border:1px solid rgba(255,255,255,0.3);
+
+  text-align:center;
+
+  /* ✨ animation entrée */
+  animation: popIn 0.6s ease;
+}
+
+/* entrée style Instagram */
+@keyframes popIn{
+  from{
+    opacity:0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to{
+    opacity:1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+h1{
+  color:white;
+  margin-bottom:15px;
+  font-weight:600;
+}
+
+/* inputs style moderne */
+input{
+  width:100%;
+  padding:12px;
+  margin:6px 0;
+  border:none;
+  border-radius:10px;
+  outline:none;
+
+  background: rgba(255,255,255,0.8);
+  transition:0.3s;
+}
+
+/* focus animé */
+input:focus{
+  transform: scale(1.03);
+  box-shadow:0 0 10px rgba(255,255,255,0.6);
+}
+
+/* bouton style app */
+button{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+
+  border:none;
+  border-radius:10px;
+
+  background: linear-gradient(45deg,#ff512f,#dd2476);
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+/* hover animé */
+button:hover{
+  transform: translateY(-2px);
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* click effet */
+button:active{
+  transform: scale(0.98);
+}
+
+/* progress bar */
+.progress{
+  width:100%;
+  height:8px;
+  background:rgba(255,255,255,0.3);
+  border-radius:10px;
+  overflow:hidden;
+  margin-top:8px;
+}
+
+#progress-bar{
+  height:100%;
+  width:0%;
+  border-radius:10px;
+  transition:0.4s;
+}
+
+/* texte message */
+#message{
+  margin-top:10px;
+  color:white;
+  font-weight:bold;
+}
+
+/* liens */
+a{
+  color:white;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+a:hover{
+  text-decoration:underline;
+}
